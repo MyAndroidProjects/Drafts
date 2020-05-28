@@ -1,0 +1,30 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="circleImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="textInput" parent="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense">
+        <item name="endIconTint">@color/red_400</item>
+        <item name="boxStrokeWidth">4dp</item>
+        <item name="boxBackgroundColor">@color/red_400</item>
+        <item name="startIconTint">@color/red_400</item>
+        <item name="boxStrokeColor">@color/red_400</item>
+        <item name="counterOverflowTextColor">@color/red_400</item>
+        <item name="errorTextColor">@color/red_400</item>
+        <item name="helperTextTextColor">@color/red_400</item>
+        <item name="android:textColorHint">@color/red_400</item>
+        <item name="boxBackgroundMode">none</item>
+
+    </style>
+
+</resources>

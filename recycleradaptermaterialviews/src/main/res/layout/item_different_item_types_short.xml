@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/medium"
+    android:layout_marginTop="@dimen/small"
+    android:layout_marginEnd="@dimen/medium"
+    android:layout_marginBottom="@dimen/small"
+    app:cardBackgroundColor="@color/blue_gray_50"
+    app:cardCornerRadius="@dimen/medium"
+    app:strokeColor="@color/blue_gray_300"
+    app:strokeWidth="@dimen/xxsmall">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/medium">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/itemShortName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:paddingStart="@dimen/medium"
+            android:paddingEnd="@dimen/medium"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            tools:text="Name" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/itemShortSurname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:paddingStart="@dimen/medium"
+            android:paddingEnd="@dimen/medium"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            tools:text="surname" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

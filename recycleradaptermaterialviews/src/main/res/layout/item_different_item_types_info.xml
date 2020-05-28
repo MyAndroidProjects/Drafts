@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/medium"
+    android:layout_marginTop="@dimen/small"
+    android:layout_marginEnd="@dimen/medium"
+    android:layout_marginBottom="@dimen/small"
+    app:cardBackgroundColor="@color/teal_50"
+    app:cardCornerRadius="@dimen/medium"
+    app:contentPaddingBottom="@dimen/medium"
+    app:contentPaddingTop="@dimen/medium"
+    app:strokeColor="@color/blue_gray_300"
+    app:strokeWidth="@dimen/xxsmall">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/itemInfoAvatarImage"
+            android:layout_width="@dimen/width_xsmall_avatar"
+            android:layout_height="@dimen/height_xsmall_avatar"
+            android:layout_marginStart="@dimen/xxxxlarge"
+            android:padding="@dimen/xsmall"
+            android:src="@drawable/blue_tiger"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/textLinearLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/circleImageView" />
+
+        <LinearLayout
+            android:id="@+id/textLinearLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/xxlarge"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/itemInfoAvatarImage"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/itemInfoName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                tools:text="Name" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/itemInfoSurname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                tools:text="surname" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/itemInfoBirthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                tools:text="birthday" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/itemInfoSpecialty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                tools:text="specialty" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/itemInfoDateOfEmployment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                tools:text="dateOfEmployment" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/itemInfoOffice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                tools:text="office" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

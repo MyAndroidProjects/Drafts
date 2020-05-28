@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Services</string>
+    <string name="stop_service">Stop service</string>
+
+
+    <string name="service_description">Permission for checking connection with server</string>
+</resources>

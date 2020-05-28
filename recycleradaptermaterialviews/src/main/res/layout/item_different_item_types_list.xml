@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemListCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/medium"
+    android:layout_marginTop="@dimen/small"
+    android:layout_marginEnd="@dimen/medium"
+    android:layout_marginBottom="@dimen/small"
+    app:cardBackgroundColor="@color/green_50"
+    app:cardCornerRadius="@dimen/medium"
+    app:contentPaddingBottom="@dimen/medium"
+    app:contentPaddingTop="@dimen/medium"
+    app:strokeColor="@color/blue_gray_300"
+    app:strokeWidth="@dimen/xxsmall"
+
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/itemListConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/xxxlarge"
+        tools:ignore="RtlSymmetry">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/itemListName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:layout_constraintBottom_toTopOf="@id/itemListSurname"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Name" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/itemListSurname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:layout_constraintBottom_toTopOf="@id/itemListSpecialty"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/itemListName"
+            tools:text="Surname" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/itemListSpecialty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:layout_constraintBottom_toTopOf="@id/itemListFrameLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/itemListSurname"
+            tools:text="Specialty" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/itemListSkillsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/favourites_skills_label"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            app:layout_constraintBottom_toTopOf="@id/itemListSkillsChipGroup"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/itemListSpecialty" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/itemListSkillsChipGroup"
+            style="@style/Widget.MaterialComponents.ChipGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/itemListFrameLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/itemListSkillsLabel">
+
+<!--            чтобы сделать прозрачным
+            app:chipBackgroundColor="@android:color/transparent"
+            app:chipSurfaceColor="@android:color/transparent"-->
+<!--            обводка чипа
+            app:chipStrokeColor="@color/yellow_600"
+            app:chipStrokeWidth="@dimen/small"-->
+
+<!--            с прозрачным фоном ripple эффект не работает, чтобы его получить можно прописать
+            app:chipBackgroundColor в цвет фона и app:rippleColor-->
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Action"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                app:chipMinHeight="@dimen/xxxxlarge"
+                android:text="test skill test skill test skill test skill"
+                app:chipIcon="@drawable/ic_book_black_24dp"
+                app:closeIcon="@drawable/ic_cancel_black_24dp"
+                app:closeIconEnabled="true"
+                app:chipBackgroundColor="@color/green_50"
+                app:closeIconSize="@dimen/large"
+
+                app:rippleColor="@color/red_400"
+                app:closeIconVisible="true"
+                app:textEndPadding="@dimen/medium" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/itemListExpandImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/xxxxlarge"
+            app:layout_constraintBottom_toBottomOf="@id/itemListSkillsLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/itemListSkillsLabel"
+            app:srcCompat="@drawable/ic_expand_more_black_24dp"
+            app:tint="@color/green_500" />
+
+        <FrameLayout
+            android:id="@+id/itemListFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small"
+            android:layout_marginTop="@dimen/medium"
+            android:layout_marginBottom="@dimen/medium"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/itemListSpecialty">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/itemListRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small"
+                android:layout_marginTop="@dimen/medium"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/itemListSpecialty"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_different_item_type_list_view" />
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

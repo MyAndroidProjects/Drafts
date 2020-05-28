@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/medium"
+    android:layout_marginTop="@dimen/small"
+    android:layout_marginEnd="@dimen/medium"
+    android:layout_marginBottom="@dimen/small"
+    app:cardBackgroundColor="@color/lime_50"
+    app:cardCornerRadius="@dimen/medium"
+    app:strokeColor="@color/blue_gray_300"
+    app:strokeWidth="@dimen/xxsmall">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/small"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <!-- TextInputLayout
+             app:counterEnabled="true" включает подсчет вводимых символов
+             app:counterMaxLength="30" устанавливает в счетчике максимальное значение, посл которого меняется цвет счетчика
+             app:errorEnabled="true" - включает отображение ошибки, появляется снизу текста, текст ошибки устанавливается в коде
+             android:hint="hint"  - подсказка
+
+             Можно задать радиусы углов:
+             app:boxCornerRadiusTopStart
+             app:boxCornerRadiusTopEnd
+             app:boxCornerRadiusBottomStart
+             app:boxCornerRadiusBottomEnd
+
+    app:helperTextEnabled
+    app:helperText
+    app:placeholderText
+    app:prefixText
+    app:suffixText
+
+            Dense style "компактный" уменьшает отступы сверху и снизу
+
+     app:boxStrokeColor - цвет подчеркивания после начала редактирования текста
+     app:boxStrokeWidth="0dp" - толщина подчеркивания ДО начала редактирования, потом всё равно появляется цветом boxStrokeColor
+    https://material.io/develop/android/components/text-input-layout/
+
+установка   android:textCursorDrawable="@null" ставит цвет курсора в цвет текста (когда пишется текст, а не когда только поставили курсор)
+            -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/itemButtonInputLayoutName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/small"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/transparent"
+                android:enabled="false"
+                android:hint="@string/hint_name"
+                app:boxCollapsedPaddingTop="@dimen/medium"
+                app:boxCornerRadiusBottomEnd="@dimen/medium"
+                app:boxCornerRadiusTopStart="@dimen/medium"
+                app:boxStrokeColor="@color/lime_50"
+                app:boxStrokeWidth="0dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="30"
+                app:endIconMode="clear_text"
+                app:helperText="@string/name_helper_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/itemButtonName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="@dimen/medium"
+                    android:enabled="true"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                    android:textCursorDrawable="@null"
+                    tools:text="Name" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/itemButtonInputLayoutSurname"
+                style="@style/textInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/small"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/transparent"
+                android:hint="@string/hint_surname"
+                app:boxCollapsedPaddingTop="@dimen/medium"
+                app:boxCornerRadiusBottomEnd="@dimen/medium"
+                app:boxCornerRadiusTopStart="@dimen/medium"
+                app:boxStrokeColor="@color/yellow_600"
+                app:counterEnabled="true"
+                app:counterMaxLength="30"
+                app:endIconMode="none"
+                app:helperText="@string/surname_helper_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/itemButtonSurname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginEnd="@dimen/medium"
+                    android:enabled="false"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                    tools:text="Surname" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/medium"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/itemButtonCancelButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/medium"
+                android:layout_marginEnd="@dimen/small"
+                android:layout_weight="1"
+                android:paddingStart="@dimen/medium"
+                android:paddingEnd="@dimen/medium"
+                android:text="@string/button_cancel_label"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:visibility="gone" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/itemButtonEditButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                app:icon="@drawable/ic_access_time_black_24dp"
+                android:layout_marginStart="@dimen/small"
+                android:layout_marginEnd="@dimen/medium"
+                android:layout_weight="1"
+                android:paddingStart="@dimen/medium"
+                android:paddingEnd="@dimen/medium"
+                android:text="@string/button_edit_label"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+            <!-- Для проверки кастомного ripple эффекта -->
+<!--            <ImageButton
+                android:layout_width="200dp"
+                android:layout_weight="1"
+                android:layout_height="200dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/blue_tiger"
+                android:background="@drawable/button_ripple_custom"-->
+
+                />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

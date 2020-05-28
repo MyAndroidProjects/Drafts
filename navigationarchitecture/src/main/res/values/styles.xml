@@ -1,0 +1,36 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar.Bridge">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="ButtonToggleGroup" parent="@style/Widget.MaterialComponents.Button.OutlinedButton">
+        <!--        <item name="colorPrimary">#E65100</item>-->
+        <!--        <item name="backgroundTint">#B39DDB</item>-->
+        <item name="cornerRadius">16dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline6
+        </item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
+    <style name="ButtonToggleGroupFragmentContainer" parent="@style/Widget.MaterialComponents.Button.OutlinedButton">
+<!--        <item name="backgroundTint">#FBC02D</item>-->
+        <item name="cornerRadius">16dp</item>
+<!--        меняет окраску обводного контура-->
+        <item name="strokeColor">@color/selector_container_toggle_button_stroke</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="backgroundTint">@color/selector_container_toggle_button_background</item>
+<!--        <item name="backgroundColor">@color/selector_container_toggle_button_background</item>-->
+<!--        <item name="rippleColor">@color/mtrl_btn_text_btn_ripple_color</item>-->
+<!--        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline6-->
+<!--        </item>-->
+    </style>
+
+</resources>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">RecyclerAdapterMaterialViews</string>
+
+    <!--    menu-->
+    <string name="simple_move_swipe_menu_item">Simple move swipe</string>
+    <string name="move_long_click_swipe_menu_item">Long click move swipe</string>
+    <string name="simple_drag_drop_menu_item"><![CDATA[Simple drag & drop]]></string>
+    <string name="staggered_grid_menu_item">staggeredgrid</string>
+
+    <!--    button item-->
+    <string name="button_stop_edit_label">stop edit</string>
+    <string name="button_edit_label">edit</string>
+    <string name="hint_name">имя</string>
+    <string name="hint_surname">фамилия</string>
+    <string name="button_cancel_label">@android:string/cancel</string>
+    <string name="surname_helper_text">Редактируй фамилию</string>
+    <string name="name_helper_text">Редактируй имя</string>
+    <string name="favourites_skills_label">Избранные навыки:</string>
+    <string name="add">add</string>
+</resources>

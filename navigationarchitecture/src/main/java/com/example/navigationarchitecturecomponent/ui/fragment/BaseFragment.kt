@@ -1,0 +1,21 @@
+package com.example.navigationarchitecturecomponent.ui.fragment
+
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import com.example.navigationarchitecturecomponent.R
+
+abstract class BaseFragment : Fragment() {
+
+    abstract fun getViewLayoutId(): Int
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(getViewLayoutId(), container, false)
+    }
+}

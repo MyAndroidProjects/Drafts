@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/indigo_400</color>
+    <color name="colorPrimaryDark">@color/yellow_500</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="textColorPrimary">@color/orange_700</color>
+    <color name="textColorSecondary">@color/red_900</color>
+    <color name="textColorTertiary">@color/green_900</color>
+
+    <color name="colorBackground">@color/indigo_100</color>
+
+
+</resources>

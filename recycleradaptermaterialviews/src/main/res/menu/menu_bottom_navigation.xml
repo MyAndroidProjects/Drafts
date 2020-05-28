@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/simpleMoveSwipeItem"
+        app:showAsAction="always"
+        android:icon="@android:drawable/ic_dialog_dialer"
+        android:title="@string/simple_move_swipe_menu_item"/>
+    <item
+        android:id="@+id/longClickMoveSwipeItem"
+        android:icon="@android:drawable/ic_dialog_dialer"
+        android:title="@string/move_long_click_swipe_menu_item"/>
+    <item
+        android:id="@+id/simpleDragDropItem"
+        android:icon="@android:drawable/ic_dialog_dialer"
+        android:title="@string/simple_drag_drop_menu_item" />
+    <item
+        android:id="@+id/staggeredGridItem"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_arrow_forward_black_24dp"
+        android:title="@string/staggered_grid_menu_item" />
+</menu>

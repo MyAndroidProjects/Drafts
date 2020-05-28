@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_100"
+    tools:context=".ui.activity.MainActivity">
+    <!--   app:selectionRequired="true" - Обязательный одиночный выбор для MaterialButtonToggleGroup
+    доступно с версии material:1.2.0-alpha03 -->
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/mainButtonToggleGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/large"
+        android:layout_marginBottom="@dimen/large"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:checkedButton="@id/buttonSetFirstFragment"
+        app:layout_constraintBottom_toTopOf="@id/buttonNextActivity"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:selectionRequired="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSetFirstFragment"
+            style="@style/ButtonToggleGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_set_first_fragment" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSetSecondFragment"
+            style="@style/ButtonToggleGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_set_second_fragment" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSetThirdFragment"
+            style="@style/ButtonToggleGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_set_third_fragment" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSetFourthFragment"
+            style="@style/ButtonToggleGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_set_fourth_fragment" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSetFragmentContainer"
+            style="@style/ButtonToggleGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_set_fragment_container" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonNextActivity"
+        style="@style/ButtonToggleGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_next_activity"
+        app:layout_constraintBottom_toTopOf="@id/mainFragmentContainer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainButtonToggleGroup" />
+
+
+    <FrameLayout
+        android:id="@+id/mainFragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/green_400"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonNextActivity">
+
+        <fragment
+            android:id="@+id/fragmentNavigation"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/navigation_main_activity" />
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

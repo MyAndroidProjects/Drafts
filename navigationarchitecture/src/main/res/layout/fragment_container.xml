@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_300"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--   app:selectionRequired="true" - Обязательный одиночный выбор для MaterialButtonToggleGroup
+    доступно с версии material:1.2.0-alpha03 -->
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/containerButtonToggleGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:checkedButton="@id/containerButtonSetFirstFragment"
+        app:layout_constraintBottom_toTopOf="@id/innerFragmentContainer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:selectionRequired="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/containerButtonSetFirstFragment"
+            style="@style/ButtonToggleGroupFragmentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/container_button_set_first_fragment" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/containerButtonSetSecondFragment"
+            style="@style/ButtonToggleGroupFragmentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/container_button_set_second_fragment" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/containerButtonSetThirdFragment"
+            style="@style/ButtonToggleGroupFragmentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/container_button_set_third_fragment" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/containerButtonSetFourthFragment"
+            style="@style/ButtonToggleGroupFragmentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/container_button_set_fourth_fragment" />
+
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <FrameLayout
+        android:id="@+id/innerFragmentContainer"
+        android:layout_width="match_parent"
+        android:background="@color/red_200"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/containerButtonToggleGroup" >
+        <fragment
+            android:id="@+id/innerFragmentNavigation"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/navigation_fragment_container" />
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,221 @@
+{
+  "response": [
+    {
+      "id": "101",
+      "firstName": "Иван",
+      "surname": "Кузнецов",
+      "birthday": "1987-03-23",
+      "avatarPath": "file:///android_asset/avatars/lion.jpg",
+      "specialty": "Менеджер",
+      "dateOfEmployment": "2019_05_20",
+      "office": "main",
+      "type": "1"
+    },
+    {
+      "id": "102",
+      "firstName": "Петр",
+      "surname": "Семенов",
+      "birthday": "1995-11-04",
+      "avatarPath": "file:///android_asset/avatars/black-wolf.jpg",
+      "specialty": "Бухгалтер",
+      "dateOfEmployment": "2018_03_10",
+      "office": "secondary",
+      "type": "0"
+    },
+    {
+      "id": "103",
+      "firstName": "Алексей",
+      "surname": "Ветров",
+      "birthday": "1993-09-22",
+      "avatarPath": "file:///android_asset/avatars/dog_wine.jpg",
+      "specialty": "Разработчик",
+      "dateOfEmployment": "2019_07_15",
+      "office": "main",
+      "type": "1"
+    },
+    {
+      "id": "104",
+      "firstName": "Евгений",
+      "surname": "Озеров",
+      "birthday": "1989-04-08",
+      "avatarPath": "file:///android_asset/avatars/gorilla.png",
+      "specialty": "Разработчик",
+      "dateOfEmployment": "2018_11_25",
+      "office": "secondary",
+      "type": "3"
+    },
+    {
+      "id": "105",
+      "firstName": "Петр",
+      "surname": "Семенов",
+      "birthday": "1995-11-04",
+      "avatarPath": "file:///android_asset/avatars/black-wolf.jpg",
+      "specialty": "Бухгалтер",
+      "dateOfEmployment": "2018_03_10",
+      "office": "secondary",
+      "type": "4",
+      "skills": [
+        "учет",
+        "1С",
+        "банковское дело",
+        "финансы и кредит"
+      ]
+    },
+    {
+      "id": "106",
+      "firstName": "Алексей",
+      "surname": "Ветров",
+      "birthday": "1993-09-22",
+      "avatarPath": "file:///android_asset/avatars/dog_wine.jpg",
+      "specialty": "Разработчик",
+      "dateOfEmployment": "2019_07_15",
+      "office": "main",
+      "type": "4",
+      "skills": [
+        "C#",
+        "kotlin",
+        "kotlin",
+        "kotlin",
+        "kotlin",
+        "kotlin",
+        "kotlin",
+        "kotlin",
+        "kotlin",
+        "kotlin",
+        "kotlin",
+        "kotlin",
+        "kotlin",
+        "kotlin",
+        "kotlin",
+        "kotlin",
+        "kotlin",
+        "kotlin",
+        "kotlin",
+        "kotlin",
+        "kotlin",
+        "java",
+        "C/C++"
+      ]
+    },
+    {
+      "id": "107",
+      "firstName": "Евгений",
+      "surname": "Озеров",
+      "birthday": "1989-04-08",
+      "avatarPath": "file:///android_asset/avatars/gorilla.png",
+      "specialty": "Разработчик",
+      "dateOfEmployment": "2018_11_25",
+      "office": "secondary",
+      "type": "3"
+    },
+    {
+      "id": "108",
+      "firstName": "Петр",
+      "surname": "Семенов",
+      "birthday": "1995-11-04",
+      "avatarPath": "file:///android_asset/avatars/black-wolf.jpg",
+      "specialty": "Бухгалтер",
+      "dateOfEmployment": "2018_03_10",
+      "office": "secondary",
+      "type": "2"
+    },
+    {
+      "id": "109",
+      "firstName": "Алексей",
+      "surname": "Ветров",
+      "birthday": "1993-09-22",
+      "avatarPath": "file:///android_asset/avatars/dog_wine.jpg",
+      "specialty": "Разработчик",
+      "dateOfEmployment": "2019_07_15",
+      "office": "main",
+      "type": "1"
+    },
+    {
+      "id": "110",
+      "firstName": "Евгений",
+      "surname": "Озеров",
+      "birthday": "1989-04-08",
+      "avatarPath": "file:///android_asset/avatars/gorilla.png",
+      "specialty": "Разработчик",
+      "dateOfEmployment": "2018_11_25",
+      "office": "secondary",
+      "type": "0"
+    },
+    {
+      "id": "111",
+      "firstName": "Петр",
+      "surname": "Семенов",
+      "birthday": "1995-11-04",
+      "avatarPath": "file:///android_asset/avatars/black-wolf.jpg",
+      "specialty": "Бухгалтер",
+      "dateOfEmployment": "2018_03_10",
+      "office": "secondary",
+      "type": "4",
+      "skills": [
+        "учет",
+        "1С",
+        "финансы и кредит"
+      ]
+    },
+    {
+      "id": "112",
+      "firstName": "Алексей",
+      "surname": "Ветров",
+      "birthday": "1993-09-22",
+      "avatarPath": "file:///android_asset/avatars/dog_wine.jpg",
+      "specialty": "Разработчик",
+      "dateOfEmployment": "2019_07_15",
+      "office": "main",
+      "type": "0"
+    },
+    {
+      "id": "113",
+      "firstName": "Евгений",
+      "surname": "Озеров",
+      "birthday": "1989-04-08",
+      "avatarPath": "file:///android_asset/avatars/gorilla.png",
+      "specialty": "Разработчик",
+      "dateOfEmployment": "2018_11_25",
+      "office": "secondary",
+      "type": "1"
+    },
+    {
+      "id": "114",
+      "firstName": "Петр",
+      "surname": "Семенов",
+      "birthday": "1995-11-04",
+      "avatarPath": "file:///android_asset/avatars/black-wolf.jpg",
+      "specialty": "Бухгалтер",
+      "dateOfEmployment": "2018_03_10",
+      "office": "secondary",
+      "type": "2"
+    },
+    {
+      "id": "115",
+      "firstName": "Алексей",
+      "surname": "Ветров",
+      "birthday": "1993-09-22",
+      "avatarPath": "file:///android_asset/avatars/dog_wine.jpg",
+      "specialty": "Разработчик",
+      "dateOfEmployment": "2019_07_15",
+      "office": "main",
+      "type": "3"
+    },
+    {
+      "id": "116",
+      "firstName": "Евгений",
+      "surname": "Озеров",
+      "birthday": "1989-04-08",
+      "avatarPath": "file:///android_asset/avatars/gorilla.png",
+      "specialty": "Разработчик",
+      "dateOfEmployment": "2018_11_25",
+      "office": "secondary",
+      "type": "4",
+      "skills": [
+        "retrofit",
+        "moxy",
+        "dagger"
+      ]
+    }
+  ]
+}

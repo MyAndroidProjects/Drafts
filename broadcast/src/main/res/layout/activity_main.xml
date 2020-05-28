@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D1C4E9"
+    tools:context=".MainActivity">
+
+    <!--    <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Press"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--    <com.google.android.material.button.MaterialButtonToggleGroup
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="First" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                android:text="SECOND" />-->
+
+    <!--    </com.google.android.material.button.MaterialButtonToggleGroup>-->
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggleGroup1"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        app:checkedButton="@id/btn11"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:singleSelection="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn11"
+            style="@style/ButtonToggleGroup2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/android"
+            app:cornerRadius="0dp"
+            app:icon="@drawable/ic_android_black_24dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn12"
+            style="@style/ButtonToggleGroup2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/sunny"
+            app:cornerRadius="0dp"
+            app:icon="@drawable/ic_ac_unit_black_24dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn13"
+            style="@style/ButtonToggleGroup2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/adb"
+            app:cornerRadius="0dp"
+            app:icon="@drawable/ic_adb_black_24dp" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggleGroup3"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginTop="48dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        app:checkedButton="@id/btn31"
+        app:layout_constraintBottom_toTopOf="@id/toggleGroup6"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:singleSelection="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn31"
+            style="@style/ButtonToggleGroup"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/android"
+            app:icon="@drawable/ic_android_black_24dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn32"
+            style="@style/ButtonToggleGroup"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/sunny"
+            app:icon="@drawable/ic_ac_unit_black_24dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn33"
+            style="@style/ButtonToggleGroup"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/adb"
+            app:icon="@drawable/ic_adb_black_24dp" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggleGroup6"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:checkedButton="@id/btn61"
+        app:layout_constraintBottom_toTopOf="@id/showHistoryButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toggleGroup3"
+        app:singleSelection="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn61"
+            style="@style/ButtonToggleGroup2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/android"
+            app:icon="@drawable/ic_android_black_24dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn62"
+            style="@style/ButtonToggleGroup2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:text="@string/sunny"
+            app:icon="@drawable/ic_ac_unit_black_24dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn63"
+            style="@style/ButtonToggleGroup2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/adb"
+            app:icon="@drawable/ic_adb_black_24dp" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/showHistoryButton"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="144dp"
+        android:text="Show history"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggleGroup4"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_margin="0dp"
+        android:orientation="horizontal"
+        android:padding="0dp"
+
+        android:weightSum="10"
+        app:checkedButton="@id/btn41"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:singleSelection="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn41"
+            style="@style/ButtonToggleGroup2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/android"
+            app:cornerRadius="0dp"
+            app:icon="@drawable/ic_android_black_24dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn42"
+            style="@style/ButtonToggleGroup2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/sunny"
+            app:cornerRadius="0dp"
+            app:icon="@drawable/ic_ac_unit_black_24dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn43"
+            style="@style/ButtonToggleGroup2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/adb"
+            app:cornerRadius="0dp"
+            app:icon="@drawable/ic_adb_black_24dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn44"
+            style="@style/ButtonToggleGroup2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/adb"
+            app:cornerRadius="0dp"
+            app:icon="@drawable/ic_adb_black_24dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn45"
+            style="@style/ButtonToggleGroup2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/adb"
+            app:cornerRadius="0dp"
+            app:icon="@drawable/ic_adb_black_24dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn46"
+            style="@style/ButtonToggleGroup2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/adb"
+            app:cornerRadius="0dp"
+            app:icon="@drawable/ic_adb_black_24dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn47"
+            style="@style/ButtonToggleGroup2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/adb"
+            app:cornerRadius="0dp"
+            app:icon="@drawable/ic_adb_black_24dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn48"
+            style="@style/ButtonToggleGroup2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/adb"
+            app:cornerRadius="0dp"
+            app:icon="@drawable/ic_adb_black_24dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn49"
+            style="@style/ButtonToggleGroup2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/adb"
+            app:cornerRadius="0dp"
+            app:icon="@drawable/ic_adb_black_24dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn40"
+            style="@style/ButtonToggleGroup2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/adb"
+            app:cornerRadius="0dp"
+            app:icon="@drawable/ic_adb_black_24dp" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+</androidx.constraintlayout.widget.ConstraintLayout>
