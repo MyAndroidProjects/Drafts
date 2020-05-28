@@ -16,6 +16,7 @@ RecyclerView:
 DifferentItemTypes,  
 DiffUtil,  
 MoveAndSwipe (long click, touch),  
+MergeAdapter,  
 ItemDecoration  
 
 Material views:
