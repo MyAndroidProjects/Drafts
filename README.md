@@ -2,7 +2,7 @@
 
 Черновики. Пробы разных технологий (в отдельных модулях).
 
-На данный момент:  
+####На данный момент:  
 BroadcastReceiver,  
 Day Night Theme,  
 Custom permission,  
@@ -12,14 +12,14 @@ Navigation Architecture Component,
 FragmentContainerView,  
 BottomNavigationView
 
-RecyclerView:  
+####RecyclerView:  
 DifferentItemTypes,  
 DiffUtil,  
 MoveAndSwipe (long click, touch),  
 MergeAdapter,  
 ItemDecoration  
 
-Material views:  
+####Material views:  
 TextInputLayout, TextInputEditText,  
 MaterialButton,  
 MaterialCardView,  
