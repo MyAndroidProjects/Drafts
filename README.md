@@ -19,9 +19,9 @@ MoveAndSwipe (long click, touch),
 MergeAdapter,  
 ItemDecoration  
 
-Material views:
-TextInputLayout, TextInputEditText, 
-MaterialButton,
+Material views:  
+TextInputLayout, TextInputEditText,  
+MaterialButton,  
 MaterialCardView,  
 ShapeableImageView,  
 ChipGroup, Chip
