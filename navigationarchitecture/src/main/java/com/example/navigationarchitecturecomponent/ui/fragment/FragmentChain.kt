@@ -6,28 +6,31 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import com.example.navigationarchitecturecomponent.R
 import com.example.navigationarchitecturecomponent.model.SimpleData
-import kotlinx.android.synthetic.main.fragment_first_simple.*
+import kotlinx.android.synthetic.main.fragment_chain.*
 
-class FirstSimpleFragment : BaseFragment() {
+class FragmentChain : BaseFragment() {
 
     companion object {
-        const val DATA_KEY = "firstDataKey"
+        const val DATA_KEY = "chainDataKey"
     }
 
     private lateinit var navController: NavController
 
-    override fun getViewLayoutId(): Int = R.layout.fragment_first_simple
+    override fun getViewLayoutId(): Int = R.layout.fragment_chain
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         navController = findNavController()
-        buttonNextSimpleFirst.setOnClickListener {
+        buttonNextChain.setOnClickListener {
             val bundle = Bundle()
-            val data = SimpleData("from first", "to chain", 155)
-            bundle.putSerializable(FragmentChain.DATA_KEY, data)
-            navController.navigate(R.id.action_firstSimpleFragment_to_fragmentChain, bundle)
+            val data = SimpleData("from chain", "to second", 552)
+            bundle.putSerializable(SecondSimpleFragment.DATA_KEY, data)
+            navController.navigate(R.id.action_fragmentChain_to_secondSimpleFragment, bundle)
+        }
+        buttonBackChain.setOnClickListener {
+            navController.popBackStack()
         }
         val currentData = getDataFromBundle(arguments, DATA_KEY)
-        setTextFromData(textSimpleFirst, currentData)
+        setTextFromData(textChain, currentData)
     }
 }

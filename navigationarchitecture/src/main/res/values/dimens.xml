@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="xxxsmall">1dp</dimen>
-    <dimen name="xxsmall">2dp</dimen>
-    <dimen name="xsmall">4dp</dimen>
-    <dimen name="small">8dp</dimen>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="xxxsmall" tools:keep="@dimen/xxxsmall">1dp</dimen>
+    <dimen name="xxsmall" tools:keep="@dimen/xxsmall">2dp</dimen>
+    <dimen name="xsmall" tools:keep="@dimen/xsmall">4dp</dimen>
+    <dimen name="small" tools:keep="@dimen/small">8dp</dimen>
     <dimen name="medium">12dp</dimen>
-    <dimen name="xmedium">16dp</dimen>
-    <dimen name="xxmedium">20dp</dimen>
-    <dimen name="large">24dp</dimen>
-    <dimen name="xlarge">32dp</dimen>
-    <dimen name="xxlarge">40dp</dimen>
-    <dimen name="xxxlarge">48dp</dimen>
-    <dimen name="xxxxlarge">72dp</dimen>
+    <dimen name="xmedium" tools:keep="@dimen/xmedium">16dp</dimen>
+    <dimen name="xxmedium" tools:keep="@dimen/xxmedium">20dp</dimen>
+    <dimen name="large" tools:keep="@dimen/large">24dp</dimen>
+    <dimen name="xlarge" tools:keep="@dimen/xlarge">32dp</dimen>
+    <dimen name="xxlarge" tools:keep="@dimen/xxlarge">40dp</dimen>
+    <dimen name="xxxlarge" tools:keep="@dimen/xxxlarge">48dp</dimen>
+    <dimen name="xxxxlarge" tools:keep="@dimen/xxxxlarge">72dp</dimen>
 </resources>

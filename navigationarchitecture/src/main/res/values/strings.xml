@@ -1,26 +1,9 @@
 <resources>
     <string name="app_name">NavigationArchitectureComponent</string>
 
-<!--    Main activity-->
-    <string name="button_set_first_fragment">First fragment</string>
-    <string name="button_set_second_fragment">Second fragment</string>
-    <string name="button_set_third_fragment">Third fragment</string>
-    <string name="button_set_fourth_fragment">Fourth fragment</string>
-    <string name="button_set_fragment_container">Fragment Container</string>
-
-<!--    Simple fragments-->
-    <string name="simple_text_first">First fragment</string>
-    <string name="simple_text_second">Second fragment</string>
-    <string name="simple_text_third">Third fragment</string>
-    <string name="simple_text_fourth">Fourth fragment</string>
-
-<!--    Fragment container-->
-    <string name="container_button_set_first_fragment">1</string>
-    <string name="container_button_set_second_fragment">2</string>
-    <string name="container_button_set_third_fragment">3</string>
-    <string name="container_button_set_fourth_fragment">4</string>
-    <string name="button_next_activity">To transitions/n between fragments</string>
-    <string name="button_previous_activity">To transitions inside/n fragment containers</string>
     <string name="button_back">BACK</string>
     <string name="button_next">NEXT</string>
+    <string name="title_first_fragment">First fragment</string>
+    <string name="title_second_fragment">Second fragment</string>
+    <string name="title_chain_fragment">Chain fragment</string>
 </resources>

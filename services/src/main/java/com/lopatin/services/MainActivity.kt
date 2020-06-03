@@ -3,23 +3,19 @@ package com.lopatin.services
 import android.content.ComponentName
 import android.content.Intent
 import android.content.ServiceConnection
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
 import android.os.IBinder
 import android.util.Log
+import androidx.annotation.Keep
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomappbar.BottomAppBar
 import com.google.android.material.bottomappbar.BottomAppBar.FAB_ALIGNMENT_MODE_CENTER
 import com.google.android.material.bottomappbar.BottomAppBar.FAB_ALIGNMENT_MODE_END
+import com.lopatin.model.eventbus.EventConnectionWithServer
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.*
-import android.app.PendingIntent
-import android.content.pm.PackageManager
-import androidx.core.app.ComponentActivity.ExtraData
-import androidx.core.content.ContextCompat.getSystemService
-import android.icu.lang.UCharacter.GraphemeClusterBreak.T
-import android.os.Build
-import androidx.annotation.Keep
-import com.lopatin.model.eventbus.EventConnectionWithServer
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
@@ -61,15 +57,20 @@ class MainActivity : AppCompatActivity() {
         Log.d("logService", "onStart")
 //        checkConnectServicePermission()
         EventBus.getDefault().register(this)
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             Log.d("logService", "Build.VERSION.SDK_INT")
-            if (checkSelfPermission(Manifest.permission.CHECK_CONNECTION) == PackageManager.PERMISSION_GRANTED) {
+            /**
+             * В отдельном приложении все работает но после переноса в модуль перестало видеть Manifest.permission.CHECK_CONNECTION (Unresolved reference: Manifest)
+             * в чем причина пока не нашёл. закомментил
+             */
+/*            if (checkSelfPermission(Manifest.permission.CHECK_CONNECTION) == PackageManager.PERMISSION_GRANTED) {
                 Log.d("logService", "CHECK_CONNECTION) == PackageManager.PERMISSION_GRANTED")
                 startSendDataToActivityByIntentService()
             } else {
                 Log.d("logService", "CHECK_CONNECTION  else")
                 checkConnectServicePermission()
-            }
+            }*/
         } else {
             Log.d("logService", "Build.VERSION.SDK_INT else")
             startSendDataToActivityByIntentService()
@@ -167,12 +168,16 @@ class MainActivity : AppCompatActivity() {
         Log.d("logService", "checkConnectServicePermission")
         val permissionList = ArrayList<String>()
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (checkSelfPermission(Manifest.permission.CHECK_CONNECTION) != PackageManager.PERMISSION_GRANTED) {
-                permissionList.add(Manifest.permission.CHECK_CONNECTION)
+            /**
+             * В отдельном приложении все работает но после переноса в модуль перестало видеть Manifest.permission.CHECK_CONNECTION (Unresolved reference: Manifest)
+             * в чем причина пока не нашёл. закомментил
+             */
+/*            if (checkSelfPermission(com.lopatin.services.Manifest.permission.CHECK_CONNECTION) != PackageManager.PERMISSION_GRANTED) {
+                permissionList.add(com.lopatin.services.Manifest.permission.CHECK_CONNECTION)
                 requestPermissions(permissionList.toTypedArray(), CHECK_CONNECTION_CODE)
             }else{
 
-            }
+            }*/
 
         }
     }
